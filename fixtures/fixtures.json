@@ -1,0 +1,1034 @@
+[
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "editorial",
+      "model": "issue"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "editorial",
+      "model": "publication"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "editorial",
+      "model": "section"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "editorial",
+      "model": "news"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "yr4459nvtqns52mi0qpbhnnsxhnzuig5",
+    "fields": {
+      "session_data": "NDE2YzFlMjFiMjE0ZjU5YmNkYzUzZGE1YzUyODBjNTY1NzE0YzQzNDp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJiNTM1NTk4NDQ4ZmVhZDVhY2E3ZjAyNjZkNzM1OTc0MzQyZThkNGU5In0=",
+      "expire_date": "2020-05-27T09:34:42.019Z"
+    }
+  },
+  {
+    "model": "editorial.publication",
+    "pk": 1,
+    "fields": {
+      "name": "Dummy Publication",
+      "description": "This is a dummy publication",
+      "slug": "dummy-publication",
+      "can_push": true
+    }
+  },
+  {
+    "model": "editorial.issue",
+    "pk": 2,
+    "fields": {
+      "created": "2020-05-13T09:39:45.050Z",
+      "modified": "2020-05-13T09:44:55.420Z",
+      "status": "draft",
+      "status_changed": "2020-05-13T09:39:45.050Z",
+      "title": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "template": "new",
+      "intro": "<p><span style=\"font-size: 17px;\">Dans Brief.me ce week-end, la relation entre la R&eacute;publique d'Irlande et l'Irlande du Nord, la p&eacute;nibilit&eacute; au travail, l'ado rebelle de Claire Bret&eacute;cher et les travailleurs du clics.</span></p>",
+      "outro": "<p><span style=\"font-size: 17px;\">Vous voil&agrave; \"brief&eacute;s\" sur l&rsquo;actu de la semaine. Passez un bon week-end &agrave; vous r&eacute;unir avec votre moiti&eacute; ou vos amis.</span><br style=\"font-size: 17px;\" /><br style=\"font-size: 17px;\" /><span style=\"font-size: 17px;\">&mdash; C&eacute;line Boff, Mathilde Doiezie, Nicolas Filio et Laurent Mauriac</span></p>",
+      "published_at": "2020-05-13T09:39:27Z",
+      "pushed": false,
+      "pushed_at": "2020-05-13T09:39:45.050Z",
+      "slug": "test-les-deux-irlande-penibilite-travailleurs-du-clic",
+      "publication": 1,
+      "uuid": "d2155445-ebd5-4304-81cc-9226ac7cb3cf"
+    }
+  },
+  {
+    "model": "editorial.section",
+    "pk": 1,
+    "fields": {
+      "created": "2020-05-13T09:36:16.945Z",
+      "modified": "2020-05-13T09:36:16.945Z",
+      "title": "Dummy Section",
+      "slug": "dummy-section",
+      "color": "#ffffff",
+      "order": 1,
+      "publication": 1,
+      "active": true
+    }
+  },
+  {
+    "model": "editorial.news",
+    "pk": 1,
+    "fields": {
+      "created": "2020-05-13T09:39:56.750Z",
+      "modified": "2020-05-13T09:41:27.628Z",
+      "title": "Les deux Irlande, une question conflictuelle",
+      "desc": "",
+      "source": "",
+      "position": 0,
+      "utitle": "",
+      "slug": "bound-method-newsget_slug-of-news-sans-titre",
+      "template": "start",
+      "data": {
+        "intro": "<p>Le Sinn Fein, un parti politique de gauche militant pour la r\u00e9union de la R\u00e9publique d'Irlande et de l'Irlande du Nord, est arriv\u00e9 en t\u00eate des \u00e9lections l\u00e9gislatives samedi dernier en R\u00e9publique d\u2019Irlande. Ayant pr\u00e9sent\u00e9 un nombre limit\u00e9 de candidats, le parti a obtenu 37 si\u00e8ges sur 160 \u00e0 la chambre basse du Parlement, ce qui en fait le deuxi\u00e8me groupe politique du pays, apr\u00e8s le parti de centre droit Fianna Fail. Le Sinn Fein a \u00e9t\u00e9 cr\u00e9\u00e9 en 1905 pour militer en faveur de l'ind\u00e9pendance compl\u00e8te de l'\u00eele d'Irlande face au pouvoir britannique, un combat contraire \u00e0 celui des unionistes d'Irlande du Nord, qui souhaitent rester attach\u00e9s au Royaume-Uni.</p>",
+        "origin": {
+          "p": "<p>L'\u00eele d'Irlande subit plusieurs invasions successives, dont celle des Normands au XIIe si\u00e8cle, avant d'\u00eatre rattach\u00e9e au royaume\u00a0d'Angleterre\u00a0en 1175. Plusieurs r\u00e9voltes ont ensuite lieu contre la domination anglaise, alors que les Anglais cherchent \u00e0 assimiler\u00a0les Irlandais et mettent en place des \u00ab plantations \u00bb, c'est-\u00e0-dire des colonies, principalement dans le nord-est de l'\u00eele \u00e0 partir du XVIe si\u00e8cle. La plupart des colons sont protestants, tandis que le reste de l'\u00eele demeure principalement catholique. Les tensions augmentent : de nombreux Irlandais r\u00e9clament davantage d'autonomie voire l'ind\u00e9pendance, comme le parti Sinn Fein, fond\u00e9 en 1905, tandis que des unionistes, principalement dans le nord-est, souhaitent rester li\u00e9s au Royaume-Uni. En 1916 \u00e9clate <a href=\"https://www.franceinter.fr/histoire/le-soulevement-de-paques-en-irlande-en-1916\" rel=\"noopener\" target=\"_blank\" title=\"France Inter | Le soul\u00e8vement de P\u00e2ques en Irlande en 1916\">l'insurrection de P\u00e2ques</a>. Mis en place par le Sinn Fein, un Parlement irlandais proclame l'ind\u00e9pendance, mais il est dissout par le pouvoir britannique. S'ensuivent trois ans de guerre, \u00e0 laquelle participe l'organisation paramilitaire nationaliste IRA tout juste cr\u00e9\u00e9e.</p>",
+          "title": "\u00c0 l\u2019origine"
+        },
+        "sub_news": {
+          "text": [
+            "<p>\u00c9amon de Valera. \u00c9amon de Valera est l'une des personnes les plus engag\u00e9es en faveur de la fin de la domination britannique sur l'\u00eele d'Irlande. En 1916, il participe \u00e0 l'insurrection de P\u00e2ques, est emprisonn\u00e9, puis est \u00e9lu d\u00e9put\u00e9 du parti Sinn Fein, dont il prend la direction en 1917. Il est nomm\u00e9 pr\u00e9sident de la R\u00e9publique d'Irlande lorsque le Parlement proclame unilat\u00e9ralement l'ind\u00e9pendance en 1919. Deux ans plus tard, il s'oppose au trait\u00e9 de partition de l'\u00eele et fonde le parti Fianna Fail. Il devient finalement pr\u00e9sident de la R\u00e9publique d'Irlande de 1959 \u00e0 1973.</p>",
+            "<p>Bobby Sands. Dans les ann\u00e9es 1970, des milliers d'activistes nationalistes sont arr\u00eat\u00e9s et emprisonn\u00e9s sans proc\u00e8s\u00a0en Irlande du Nord. C'est le cas de Bobby Sands, un nationaliste membre d'une des branches de l'IRA. Il est l'un des prisonniers embl\u00e9matiques des r\u00e9bellions men\u00e9es au sein du syst\u00e8me carc\u00e9ral. Avec plusieurs d\u00e9tenus, il entame une gr\u00e8ve de la faim en 1981. Il d\u00e9c\u00e8de apr\u00e8s 66 jours de di\u00e8te, entra\u00eenant des \u00e9meutes. La Premi\u00e8re ministre Margaret Thatcher d\u00e9clare : \u00ab M. Sands \u00e9tait un criminel condamn\u00e9. Il a choisi de s'enlever la vie. \u00bb</p>",
+            "<p>Arlene Foster. Dirigeante du Parti unioniste d\u00e9mocrate (DUP) depuis 2015, Arlene Foster devient Premi\u00e8re ministre d'Irlande du Nord en 2016. En 2017, elle \u00e9choue \u00e0 former un gouvernement de coalition avec le Sinn Fein, donnant lieu \u00e0 une suspension des institutions nord-irlandaises. C'est gr\u00e2ce \u00e0 un accord avec le DUP que la Premi\u00e8re ministre britannique, Theresa May, obtient en 2017 la majorit\u00e9 \u00e0 la Chambre des communes lui permettant de former un gouvernement. Le DUP, hostile \u00e0 l'\u00e9tablissement d'un statut particulier pour l'Irlande du Nord, est oppos\u00e9 \u00e0 l'accord sur le Brexit.</p>"
+          ],
+          "title": "Les personnages"
+        },
+        "chronology": {
+          "dates": [
+            {
+              "p": "<p>Pour mettre un terme au conflit qui l'oppose aux nationalistes irlandais, le Royaume-Uni organise en 1921 la partition de l'\u00eele en deux r\u00e9gions dot\u00e9es d'une relative autonomie : l'Irlande du Nord avec six comt\u00e9s \u00e0 majorit\u00e9 protestante et l'Irlande du Sud\u00a0avec 26 comt\u00e9s \u00e0 dominante catholique. Les nationalistes ne sont toutefois pas satisfaits et parviennent \u00e0 n\u00e9gocier un trait\u00e9 pour l'ensemble de l'\u00eele donnant <a href=\"https://www.britannica.com/place/Ireland/Independent-Ireland-to-1959#ref316077\" rel=\"noopener\" target=\"_blank\" title=\"Britannica | Ireland - Independent Ireland to 1959\">naissance le 6 d\u00e9cembre 1922 \u00e0 l'\u00c9tat libre d'Irlande</a>, qui dispose de ses propres institutions et gouvernement, mais demeure rattach\u00e9 \u00e0 l'Empire britannique. L'Irlande du Nord, qui dispose d'un droit de retrait, l'exerce d\u00e8s le lendemain\u00a0pour rester attach\u00e9e au Royaume-Uni. Une moiti\u00e9 de l'IRA n'accepte pas le trait\u00e9 et continue la lutte pour l'ind\u00e9pendance totale de l'\u00eele, entra\u00eenant une guerre civile, remport\u00e9e deux ans plus tard par les partisans du trait\u00e9. Ces derniers fondent le parti Fine Gael, les autres le Fianna Fail. Ces deux formations dominent la vie politique irlandaise jusqu'\u00e0 aujourd'hui. En 1949, la R\u00e9publique d'Irlande\u00a0est proclam\u00e9e et le pays quitte l'Empire britannique.</p>",
+              "year": "1921"
+            },
+            {
+              "p": "<p>En Irlande du Nord, les catholiques s'estiment <a href=\"https://www.lemonde.fr/europe/video/2018/04/10/les-troubles-comprendre-trente-ans-de-guerre-civile-en-irlande-du-nord_5283175_3214.html\" rel=\"noopener\" target=\"_blank\" title=\"Le Monde | \u00ab Les Troubles \u00bb : comprendre trente ans de guerre civile en Irlande du Nord\">victimes de discriminations \u00e9conomiques, sociales</a>\u00a0et politiques et s'organisent pour r\u00e9clamer plus de droits. En octobre 1968, la police r\u00e9prime une manifestation pacifique \u00e0 Derry, interdite par le gouvernement, faisant pr\u00e8s de 100 bless\u00e9s. En janvier 1969, un quartier catholique de la ville de Derry est envahi par la police, conduisant \u00e0 un soul\u00e8vement de la population, qui proclame l'autonomie de cette enclave baptis\u00e9e Free Derry. Face \u00e0 la mont\u00e9e des tensions entre groupes nationalistes et unionistes, le Royaume-Uni d\u00e9ploie l'arm\u00e9e en Irlande du Nord. Ces \u00e9v\u00e9nements sont constitutifs des \u00ab troubles \u00bb, soit 30 ann\u00e9es de conflit en Irlande du Nord. L'IRA, qui revendique plusieurs attentats, se dispute sur la position, politique ou militaire, \u00e0 adopter. En 1972, la r\u00e9pression d'une manifestation par l'arm\u00e9e britannique entra\u00eene la mort de 14 personnes, un \u00e9v\u00e9nement connu sous le nom de \u00ab Bloody Sunday \u00bb. La m\u00eame ann\u00e9e, le Royaume-Uni suspend les institutions nord-irlandaises.</p>",
+              "year": "1968"
+            },
+            {
+              "p": "<p><a href=\"https://www.la-croix.com/Debats/Ce-jour-la/10-avril-1998-signature-laccord-Vendredi-saint-paix-Irlande-2018-04-10-1200930446\" rel=\"noopener\" target=\"_blank\" title=\"La Croix | 10 avril 1998, signature de l\u2019accord du \u00ab Vendredi saint \u00bb sur la paix en Irlande\">L'accord du Vendredi saint, sign\u00e9 \u00e0 Belfast en 1998</a>, met fin au conflit nord-irlandais, qui a fait plus de 3 500 morts, selon l'universit\u00e9 d'Ulster. Il est n\u00e9goci\u00e9 entre le gouvernement du Premier ministre britannique Tony Blair, les nationalistes et unionistes nord-irlandais, ainsi qu'avec le nouveau Premier ministre irlandais, Bertie Ahern. Cet accord pr\u00e9voit un partage du pouvoir \u00e9quitable entre protestants et catholiques, la cr\u00e9ation d'une assembl\u00e9e et d'un ex\u00e9cutif local, tout en conservant le rattachement de l'Irlande du Nord au Royaume-Uni. Un conseil de coop\u00e9ration nord-sud irlandais est \u00e9galement cr\u00e9\u00e9, pour favoriser la coop\u00e9ration entre les deux territoires. La R\u00e9publique d'Irlande modifie sa Constitution pour ne plus revendiquer l'int\u00e9gralit\u00e9 de l'\u00eele. Cet accord est valid\u00e9 par un r\u00e9f\u00e9rendum : le oui l'emporte avec 71 % des suffrages en Irlande du Nord et \u00e0 94 % en R\u00e9publique d'Irlande. L'IRA d\u00e9pose d\u00e9finitivement les armes en 2005, m\u00eame si des groupuscules continuent de mener des actions arm\u00e9es.</p>",
+              "year": "1998"
+            },
+            {
+              "p": "<p>Lors d'un r\u00e9f\u00e9rendum organis\u00e9 en 2016, les \u00e9lecteurs britanniques votent \u00e0 51,9 % en faveur de la sortie du Royaume-Uni de l'Union europ\u00e9enne. Les Nord-Irlandais y sont n\u00e9anmoins majoritairement d\u00e9favorables. Ce vote d\u00e9clenche le processus du Brexit, qui ravive des tensions autour de la <a href=\"https://www.franceinter.fr/emissions/la-marche-de-l-histoire/la-marche-de-l-histoire-22-janvier-2019\" rel=\"noopener\" target=\"_blank\" title=\"France Inter | L'Irlande et sa fronti\u00e8re\">question de la fronti\u00e8re entre l'Irlande du Nord et la R\u00e9publique d'Irlande</a>, puisqu'il s'agit de la seule fronti\u00e8re terrestre entre le Royaume-Uni et l'Union europ\u00e9enne. Le Royaume-Uni comme l'UE ne souhaitent pas le retour d'une fronti\u00e8re physique entre les deux territoires irlandais, afin de ne pas raviver les tensions entre unionistes et nationalistes, mais le Royaume-Uni ne veut pas non plus rester dans le March\u00e9 unique europ\u00e9en, qui permet la libre circulation des biens et des personnes. L\u2019accord sur le Brexit conclu en 2019 propose finalement une solution de contournement, qui pr\u00e9voit que des contr\u00f4les soient effectu\u00e9s entre l\u2019Irlande du Nord et l\u2019\u00eele de Grande-Bretagne pour les marchandises transitant vers l\u2019UE via l\u2019Irlande du Nord.</p>",
+              "year": "2016"
+            }
+          ],
+          "title": "Les dates cl\u00e9s"
+        }
+      },
+      "image": "",
+      "image_sn": "",
+      "issue": 2,
+      "section": 1
+    }
+  },
+  {
+    "model": "editorial.news",
+    "pk": 2,
+    "fields": {
+      "created": "2020-05-13T09:41:44.384Z",
+      "modified": "2020-05-13T09:43:08.764Z",
+      "title": "",
+      "desc": "",
+      "source": "",
+      "position": 0,
+      "utitle": "",
+      "slug": "bound-method-newsget_slug-of-news-sans-titre",
+      "template": "rewind",
+      "data": {
+        "rewind": [
+          {
+            "link": {
+              "url": "https://www.francetvinfo.fr/monde/afrique/guinee-equatoriale/biens-mal-acquis-nous-souhaitons-que-la-loi-francaise-permette-de-renvoyer-les-sommes-confisquees-aux-populations-spoliees-plaide-marc-andre-feffer_3748749.html",
+              "text": "Lire son interview sur Franceinfo.",
+              "title": "\"Biens mal acquis\" : \"Nous souhaitons que la loi fran\u00e7aise permette de renvoyer les sommes confisqu\u00e9es aux populations spoli\u00e9es\", plaide Marc-Andr\u00e9 Feffer"
+            },
+            "text": "<p><strong>La cour d\u2019appel de Paris a condamn\u00e9 lundi Teodorin Obiang, vice-pr\u00e9sident de Guin\u00e9e \u00e9quatoriale et fils du pr\u00e9sident Teodoro Obiang, \u00e0 trois ans de prison avec sursis</strong>\u00a0et 30 millions d\u2019euros d\u2019amende, pour avoir acquis avec des fonds d\u2019origine frauduleuse des biens et du patrimoine en France. \"C'est la premi\u00e8re fois\u00a0en France qu'un dirigeant \u00e9tranger, qui a utilis\u00e9 de l'argent sale pour acheter des biens immobiliers ou mobiliers en France, est condamn\u00e9 p\u00e9nalement\", a d\u00e9clar\u00e9 \u00e0 Franceinfo Marc-Andr\u00e9 Feffer, pr\u00e9sident de l'association de lutte contre la corruption Transparency International France.</p>",
+            "kicker": "BIENS MAL ACQUIS"
+          },
+          {
+            "link": {},
+            "text": "<p>Le quotidien am\u00e9ricain Washington Post et les m\u00e9dias allemand ZDF et suisse SRF ont r\u00e9v\u00e9l\u00e9 mardi que <strong>la CIA et le BND, les services secrets am\u00e9ricain et allemand, avaient espionn\u00e9 plus de 100 \u00c9tats</strong> \u00e0 travers des \u00e9quipements de chiffrement de conversation vendus par une soci\u00e9t\u00e9 suisse qu'ils avaient secr\u00e8tement rachet\u00e9e \u00e0 la fin des ann\u00e9es 1960. Selon les trois m\u00e9dias, le BND a revendu ses parts de cette soci\u00e9t\u00e9 \u00e0 la CIA lors de la r\u00e9unification allemande et la CIA a revendu la soci\u00e9t\u00e9 en 2018.</p>",
+            "kicker": "ESPIONNAGE D'\u00c9TATS"
+          },
+          {
+            "link": {
+              "url": "https://blog.insee.fr/chomage-les-francais-mentent-ils-aux-francais/",
+              "text": "Lire l'explication de l'Insee sur la diff\u00e9rence entre un ch\u00f4meur et un demandeur d'emploi.",
+              "title": "Ch\u00f4mage : les Fran\u00e7ais mentent-ils aux Fran\u00e7ais? | Le blog de l'Insee Le blog de l'Insee"
+            },
+            "text": "<p><strong>Le taux de ch\u00f4mage est pass\u00e9 de 8,5 % \u00e0 8,1 % de la population active en France (hors Mayotte) entre le d\u00e9but et la fin du quatri\u00e8me trimestre 2019,</strong> selon des chiffres publi\u00e9s jeudi par l\u2019institut de statistiques Insee. Il descend \u00e0 son niveau le plus bas depuis fin 2008. Le \u00ab halo autour du ch\u00f4mage \u00bb (les personnes inactives qui souhaitent un emploi sans \u00eatre consid\u00e9r\u00e9es au ch\u00f4mage) est cependant au plus haut depuis 2003.</p>",
+            "kicker": "TAUX DE CH\u00d4MAGE"
+          },
+          {
+            "link": {
+              "url": "https://app.brief.me/article/2020-02-14-9824-la-direction-de-lacademie-des-cesar-demissionne/",
+              "text": "Lire les explications de Brief.me.",
+              "title": "Brief.me | La direction de l\u2019Acad\u00e9mie des C\u00e9sar d\u00e9missionne"
+            },
+            "text": "<p><strong>La direction de l\u2019Acad\u00e9mie des C\u00e9sar, l\u2019organisme qui remet chaque ann\u00e9e les r\u00e9compenses du cin\u00e9ma fran\u00e7ais, a annonc\u00e9 jeudi la d\u00e9mission collective de ses 21 membres,</strong> deux semaines avant la c\u00e9r\u00e9monie de remise des prix pr\u00e9vue le 28 f\u00e9vrier. Le 10 f\u00e9vrier, 200 professionnels du cin\u00e9ma, dont les acteurs Gilles Lellouche, Le\u00efla Bekhti et Roschdy Zem, ont d\u00e9nonc\u00e9 dans une tribune publi\u00e9e dans Le Monde les \u00ab dysfonctionnements \u00bb de l\u2019Acad\u00e9mie des C\u00e9sar, dont ils sont tous membres, et de sa direction.</p>",
+            "kicker": "C\u00c9SAR"
+          },
+          {
+            "link": {
+              "url": "https://www.20minutes.fr/justice/2718479-20200214-video-retrait-benjamin-griveaux-risque-diffuser-images-caractere-sexuel-autre-personne-insu",
+              "text": "Lire cet article de 20 Minutes qui revient sur le d\u00e9lit de \"revenge porn\".",
+              "title": "VIDEO. Retrait de Benjamin Griveaux : Que risque-t-on \u00e0 diffuser des images \u00e0 caract\u00e8re sexuel d\u2019une autre personne \u00e0 son insu ?"
+            },
+            "text": "<p><strong>Candidat LREM \u00e0 la mairie de Paris, Benjamin Griveaux a renonc\u00e9 hier \u00e0 se pr\u00e9senter \u00e0 l'\u00e9lection municipale</strong>, dont le premier tour aura lieu le 15 mars. Il a d\u00e9clar\u00e9 avoir pris cette d\u00e9cision afin de prot\u00e9ger sa famille, apr\u00e8s la publication de vid\u00e9os \u00e0 caract\u00e8re sexuel qui lui sont attribu\u00e9es. Un artiste russe r\u00e9fugi\u00e9 en France, Piotr Pavlenski, a revendiqu\u00e9 avoir diffus\u00e9 ces vid\u00e9os pour d\u00e9noncer \u00ab l'hypocrisie \u00bb du candidat qui d\u00e9fend des \u00ab valeurs familiales \u00bb, a-t-il expliqu\u00e9 \u00e0 Lib\u00e9ration.</p>",
+            "kicker": "BENJAMIN GRIVEAUX"
+          },
+          {
+            "link": {},
+            "text": "<p>La Commission nationale de la sant\u00e9 chinoise, l\u2019\u00e9quivalent du minist\u00e8re de la Sant\u00e9, a annonc\u00e9 hier que <strong>l\u2019\u00e9pid\u00e9mie de coronavirus qui s\u2019est d\u00e9clench\u00e9e en d\u00e9cembre en Chine avait fait 1 380 morts dans le pays</strong>. Jeudi, elle avait annonc\u00e9 15 152 nouveaux cas de contamination, soit 7,5 fois plus que la veille, en raison de l'adoption d'une nouvelle mani\u00e8re de d\u00e9tecter les cas. L'Organisation mondiale de la sant\u00e9 a rebaptis\u00e9 mardi le coronavirus Covid-19 et a d\u00e9clar\u00e9 que l'\u00e9pid\u00e9mie constitue \u00ab une tr\u00e8s grave menace pour le reste du monde \u00bb et pas seulement en Chine.</p>",
+            "kicker": "CORONAVIRUS"
+          }
+        ]
+      },
+      "image": "",
+      "image_sn": "",
+      "issue": 2,
+      "section": 1
+    }
+  },
+  {
+    "model": "editorial.news",
+    "pk": 3,
+    "fields": {
+      "created": "2020-05-13T09:43:22.451Z",
+      "modified": "2020-05-13T09:43:27.249Z",
+      "title": "P\u00e9nibilit\u00e9",
+      "desc": "",
+      "source": "",
+      "position": 0,
+      "utitle": "",
+      "slug": "penibilite",
+      "template": "basic",
+      "data": {
+        "text": [
+          "<p>Apr\u00e8s avoir re\u00e7u les partenaires sociaux jeudi matin, le Premier ministre, \u00c9douard Philippe, a d\u00e9clar\u00e9 qu'il souhaitait \u00ab tout remettre \u00e0 plat pour instaurer des r\u00e8gles de p\u00e9nibilit\u00e9 universelles \u00bb, alors qu'elles diff\u00e8rent aujourd'hui selon les r\u00e9gimes de retraite. La p\u00e9nibilit\u00e9 est d\u00e9finie dans le Code du travail comme <a href=\"http://www.inrs.fr/demarche/penibilite/ce-qu-il-faut-retenir.html\" rel=\"noopener\" target=\"_blank\" title=\"P\u00e9nibilit\u00e9 au travail. Ce qu\u2019il faut retenir | D\u00e9marches de pr\u00e9vention | INRS\">l'exposition \u00e0 des facteurs de risques professionnels</a>\u00a0\"li\u00e9s \u00e0 des contraintes physiques marqu\u00e9es, \u00e0 un environnement physique agressif ou \u00e0 certains rythmes de travail susceptibles de laisser des traces durables identifiables et irr\u00e9versibles\" sur la sant\u00e9. Lorsqu'un salari\u00e9 du secteur priv\u00e9 ou agricole est expos\u00e9 \u00e0 de tels risques, son employeur doit \u00e9tablir une d\u00e9claration lui permettant de b\u00e9n\u00e9ficier d'un compte professionnel de pr\u00e9vention sur lequel il accumule des points. Ceux-ci offrent des avantages pour se former, b\u00e9n\u00e9ficier d'un temps partiel sans perte de salaire ou partir plus t\u00f4t \u00e0 la retraite. Six facteurs sont pris en compte\u00a0aujourd'hui pour l'acquisition de points, dont le travail de nuit, les temp\u00e9ratures extr\u00eames et le bruit.</p>"
+        ]
+      },
+      "image": "",
+      "image_sn": "",
+      "issue": 2,
+      "section": 1
+    }
+  },
+  {
+    "model": "editorial.news",
+    "pk": 4,
+    "fields": {
+      "created": "2020-05-13T09:43:43.606Z",
+      "modified": "2020-05-13T09:44:03.381Z",
+      "title": "",
+      "desc": "",
+      "source": "",
+      "position": 0,
+      "utitle": "",
+      "slug": "bound-method-newsget_slug-of-news-sans-titre",
+      "template": "basic",
+      "data": {
+        "text": [
+          "<p>Correspondant en France pour le New York Times, le journaliste Norimitsu Onishi a retrouv\u00e9 l'\u00e9crivain fran\u00e7ais Gabriel Matzneff, poursuivi pour viols sur mineure de moins de 15 ans apr\u00e8s la publication en janvier du livre \u00ab Le Consentement \u00bb, de Vanessa Springora. Dans une longue enqu\u00eate traduite en fran\u00e7ais, il revient sur le parcours de l'\u00e9crivain qui \u00ab n'a pas l'habitude de se cacher \u00bb car il a justement <a href=\"https://www.nytimes.com/fr/2020/02/11/world/europe/france-gabriel-matzneff-pedophilie.html\" rel=\"noopener\" target=\"_blank\" title=\"The New York Times | Un \u00e9crivain p\u00e9dophile \u2014 et l\u2019\u00e9lite fran\u00e7aise \u2014 sur le banc des accus\u00e9s\">longtemps \u00e9t\u00e9 adoub\u00e9 par une \u00ab certaine \u00e9lite \u00bb</a>, aujourd'hui \u00e0 c\u00f4t\u00e9 de lui \u00ab sur le banc des accus\u00e9s \u00bb.</p>",
+          "<p>R\u00e9f\u00e9rences absolues, <a href=\"https://www.binge.audio/votre-dictionnaire-est-il-de-droite/\" rel=\"noopener\" target=\"_blank\" title=\"Votre dictionnaire est-il de droite ? \u2013 Binge Audio\">les dictionnaires sont-ils pour autant neutres</a>\u00a0par rapport \u00e0 la langue qu'ils tentent de figer entre leurs pages ? Le dernier \u00e9pisode du podcast \u00ab Parler comme jamais \u00bb, du studio Binge Audio, re\u00e7oit Marie-H\u00e9l\u00e8ne Drivaud, lexicographe et directrice \u00e9ditoriale du Petit Robert, et Bernard Cerquiglini, professeur de linguistique et conseiller scientifique du Petit Larousse. Un \u00e9pisode riche en enseignements sur la fa\u00e7on dont les nouveaux mots sont choisis et sur l'identit\u00e9 de chaque dictionnaire.</p>",
+          "<p>En deux heures et demie, en pleine nuit, Bilel, 24 ans, et son fr\u00e8re a\u00een\u00e9, 26 ans, ont beau parcourir Lyon, ils n'obtiennent qu'une commande Uber Eats \u00e0 livrer et donc \u00e0 peine trois euros de revenus. En quatre \u00e9pisodes, la s\u00e9rie documentaire \u00ab Invisibles \u00bb de FranceTV suit des livreurs \u00e0 domicile ou des mod\u00e9rateurs sur les r\u00e9seaux sociaux travaillant pour de grands groupes du num\u00e9rique. De quoi <a href=\"https://www.france.tv/slash/invisibles/saison-1/1274809-roulez-jeunesse.html\" rel=\"noopener\" target=\"_blank\" title=\"Invisibles saison 1 | \u00e9pisode 1 en streaming sur France tv slash\">donner chair \u00e0 ce qui se passe de l'autre c\u00f4t\u00e9 de nos clics</a>, pour mieux comprendre l'adage du deuxi\u00e8me \u00e9pisode : \u00ab micro-travailler plus, pour micro-gagner moins \u00bb.</p>",
+          "<p>D\u00e9c\u00e9d\u00e9e mardi \u00e0 l'\u00e2ge de 79 ans, la dessinatrice et autrice de BD Claire Bret\u00e9cher laisse derri\u00e8re elle son excellente s\u00e9rie \"Agrippine\", qui narre le quotidien d'une adolescente adorant se regarder le nombril, provoquer ses parents et chercher tous les moyens pour s'\u00e9manciper. Adapt\u00e9e pour la t\u00e9l\u00e9vision en 2001 en 26 \u00e9pisodes, la s\u00e9rie est accessible en int\u00e9gralit\u00e9 sur Arte depuis cette semaine et jusqu'au 13 mai. De quoi <a href=\"https://www.arte.tv/fr/videos/026291-002-A/agrippine-2-26/\" rel=\"noopener\" target=\"_blank\" title=\"Agrippine (2/26) | Depression | ARTE\">s'\u00e9prendre \u00e0 nouveau de cette ado aussi dr\u00f4le qu' \u00ab attachiante \u00bb</a>.</p>"
+        ]
+      },
+      "image": "",
+      "image_sn": "",
+      "issue": 2,
+      "section": 1
+    }
+  },
+  {
+    "model": "editorial.news",
+    "pk": 5,
+    "fields": {
+      "created": "2020-05-13T09:44:17.644Z",
+      "modified": "2020-05-13T09:44:24.728Z",
+      "title": "",
+      "desc": "",
+      "source": "",
+      "position": 0,
+      "utitle": "",
+      "slug": "bound-method-newsget_slug-of-news-sans-titre",
+      "template": "quote",
+      "data": {
+        "text": "<p>D\u00e9c\u00e9d\u00e9e mardi \u00e0 l'\u00e2ge de 79 ans, la dessinatrice et autrice de BD Claire Bret\u00e9cher laisse derri\u00e8re elle son excellente s\u00e9rie \"Agrippine\", qui narre le quotidien d'une adolescente adorant se regarder le nombril, provoquer ses parents et chercher tous les moyens pour s'\u00e9manciper. Adapt\u00e9e pour la t\u00e9l\u00e9vision en 2001 en 26 \u00e9pisodes, la s\u00e9rie est accessible en int\u00e9gralit\u00e9 sur Arte depuis cette semaine et jusqu'au 13 mai. De quoi <a href=\"https://www.arte.tv/fr/videos/026291-002-A/agrippine-2-26/\" rel=\"noopener\" target=\"_blank\" title=\"Agrippine (2/26) | Depression | ARTE\">s'\u00e9prendre \u00e0 nouveau de cette ado aussi dr\u00f4le qu' \u00ab attachiante \u00bb</a>.</p>",
+        "quote": "<p>D\u00e9c\u00e9d\u00e9e mardi \u00e0 l'\u00e2ge de 79 ans, la dessinatrice et autrice de BD Claire Bret\u00e9cher laisse derri\u00e8re elle son excellente s\u00e9rie \"Agrippine\", qui narre le quotidien d'une adolescente adorant se regarder le nombril, provoquer ses parents et chercher tous les moyens pour s'\u00e9manciper. Adapt\u00e9e pour la t\u00e9l\u00e9vision en 2001 en 26 \u00e9pisodes, la s\u00e9rie est accessible en int\u00e9gralit\u00e9 sur Arte depuis cette semaine et jusqu'au 13 mai. De quoi <a href=\"https://www.arte.tv/fr/videos/026291-002-A/agrippine-2-26/\" rel=\"noopener\" target=\"_blank\" title=\"Agrippine (2/26) | Depression | ARTE\">s'\u00e9prendre \u00e0 nouveau de cette ado aussi dr\u00f4le qu' \u00ab attachiante \u00bb</a>.</p>"
+      },
+      "image": "",
+      "image_sn": "",
+      "issue": 2,
+      "section": 1
+    }
+  },
+  {
+    "model": "editorial.news",
+    "pk": 6,
+    "fields": {
+      "created": "2020-05-13T09:44:31.901Z",
+      "modified": "2020-05-13T09:44:38.800Z",
+      "title": "",
+      "desc": "",
+      "source": "",
+      "position": 0,
+      "utitle": "",
+      "slug": "bound-method-newsget_slug-of-news-sans-titre",
+      "template": "questions",
+      "data": {
+        "questions": [
+          {
+            "answer": "<p>D\u00e9c\u00e9d\u00e9e mardi \u00e0 l'\u00e2ge de 79 ans, la dessinatrice et autrice de BD Claire Bret\u00e9cher laisse derri\u00e8re elle son excellente s\u00e9rie \"Agrippine\", qui narre le quotidien d'une adolescente adorant se regarder le nombril, provoquer ses parents et chercher tous les moyens pour s'\u00e9manciper. Adapt\u00e9e pour la t\u00e9l\u00e9vision en 2001 en 26 \u00e9pisodes, la s\u00e9rie est accessible en int\u00e9gralit\u00e9 sur Arte depuis cette semaine et jusqu'au 13 mai. De quoi <a href=\"https://www.arte.tv/fr/videos/026291-002-A/agrippine-2-26/\" rel=\"noopener\" target=\"_blank\" title=\"Agrippine (2/26) | Depression | ARTE\">s'\u00e9prendre \u00e0 nouveau de cette ado aussi dr\u00f4le qu' \u00ab attachiante \u00bb</a>.</p>",
+            "question": "Test"
+          }
+        ]
+      },
+      "image": "",
+      "image_sn": "",
+      "issue": 2,
+      "section": 1
+    }
+  },
+  {
+    "model": "editorial.news",
+    "pk": 7,
+    "fields": {
+      "created": "2020-05-13T09:44:50.672Z",
+      "modified": "2020-05-13T09:44:55.423Z",
+      "title": "",
+      "desc": "",
+      "source": "",
+      "position": 0,
+      "utitle": "",
+      "slug": "bound-method-newsget_slug-of-news-sans-titre",
+      "template": "image",
+      "data": {
+        "text": [
+          "<p>D\u00e9c\u00e9d\u00e9e mardi \u00e0 l'\u00e2ge de 79 ans, la dessinatrice et autrice de BD Claire Bret\u00e9cher laisse derri\u00e8re elle son excellente s\u00e9rie \"Agrippine\", qui narre le quotidien d'une adolescente adorant se regarder le nombril, provoquer ses parents et chercher tous les moyens pour s'\u00e9manciper. Adapt\u00e9e pour la t\u00e9l\u00e9vision en 2001 en 26 \u00e9pisodes, la s\u00e9rie est accessible en int\u00e9gralit\u00e9 sur Arte depuis cette semaine et jusqu'au 13 mai. De quoi <a href=\"https://www.arte.tv/fr/videos/026291-002-A/agrippine-2-26/\" rel=\"noopener\" target=\"_blank\" title=\"Agrippine (2/26) | Depression | ARTE\">s'\u00e9prendre \u00e0 nouveau de cette ado aussi dr\u00f4le qu' \u00ab attachiante \u00bb</a>.</p>"
+        ]
+      },
+      "image": "",
+      "image_sn": "",
+      "issue": 2,
+      "section": 1
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add issue",
+      "content_type": 7,
+      "codename": "add_issue"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change issue",
+      "content_type": 7,
+      "codename": "change_issue"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete issue",
+      "content_type": 7,
+      "codename": "delete_issue"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view issue",
+      "content_type": 7,
+      "codename": "view_issue"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add publication",
+      "content_type": 8,
+      "codename": "add_publication"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change publication",
+      "content_type": 8,
+      "codename": "change_publication"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete publication",
+      "content_type": 8,
+      "codename": "delete_publication"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view publication",
+      "content_type": 8,
+      "codename": "view_publication"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add section",
+      "content_type": 9,
+      "codename": "add_section"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change section",
+      "content_type": 9,
+      "codename": "change_section"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete section",
+      "content_type": 9,
+      "codename": "delete_section"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view section",
+      "content_type": 9,
+      "codename": "view_section"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add news",
+      "content_type": 10,
+      "codename": "add_news"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change news",
+      "content_type": 10,
+      "codename": "change_news"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete news",
+      "content_type": 10,
+      "codename": "delete_news"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view news",
+      "content_type": 10,
+      "codename": "view_news"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$kFmkYzKHCmmD$HdIYYgREX2Od3O1x8K7TYAxUR7lRp++XqO/SsfW6Zy4=",
+      "last_login": "2020-05-13T09:34:42.017Z",
+      "is_superuser": true,
+      "username": "briefme",
+      "first_name": "",
+      "last_name": "",
+      "email": "hello@brief.me",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-05-13T09:31:17.379Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2020-05-13T09:36:02.550Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Dummy Publication",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2020-05-13T09:36:16.954Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Dummy Section",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2020-05-13T09:39:45.058Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2020-05-13T09:39:56.756Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"added\": {\"name\": \"news\", \"object\": \"Sans titre\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2020-05-13T09:40:06.300Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"name\": \"news\", \"object\": \"Les deux Irlande, une question conflictuelle\", \"fields\": [\"title\", \"data\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2020-05-13T09:40:23.418Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"name\": \"news\", \"object\": \"Les deux Irlande, une question conflictuelle\", \"fields\": [\"data\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2020-05-13T09:40:59.829Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"name\": \"news\", \"object\": \"Les deux Irlande, une question conflictuelle\", \"fields\": [\"data\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2020-05-13T09:41:11.955Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"name\": \"news\", \"object\": \"Les deux Irlande, une question conflictuelle\", \"fields\": [\"data\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2020-05-13T09:41:27.632Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"name\": \"news\", \"object\": \"Les deux Irlande, une question conflictuelle\", \"fields\": [\"data\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2020-05-13T09:41:44.392Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"added\": {\"name\": \"news\", \"object\": \"Sans titre\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2020-05-13T09:43:08.767Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"name\": \"news\", \"object\": \"Sans titre\", \"fields\": [\"data\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2020-05-13T09:43:22.464Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"added\": {\"name\": \"news\", \"object\": \"P\\u00e9nibilit\\u00e9\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2020-05-13T09:43:27.251Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"name\": \"news\", \"object\": \"P\\u00e9nibilit\\u00e9\", \"fields\": [\"data\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2020-05-13T09:43:43.622Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"added\": {\"name\": \"news\", \"object\": \"Sans titre\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2020-05-13T09:44:03.384Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"name\": \"news\", \"object\": \"Sans titre\", \"fields\": [\"data\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2020-05-13T09:44:17.656Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"added\": {\"name\": \"news\", \"object\": \"Sans titre\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2020-05-13T09:44:24.730Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"name\": \"news\", \"object\": \"Sans titre\", \"fields\": [\"data\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2020-05-13T09:44:31.916Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"added\": {\"name\": \"news\", \"object\": \"Sans titre\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2020-05-13T09:44:38.802Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"name\": \"news\", \"object\": \"Sans titre\", \"fields\": [\"data\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2020-05-13T09:44:50.688Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"added\": {\"name\": \"news\", \"object\": \"Sans titre\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2020-05-13T09:44:55.427Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "[TEST] Les deux Irlande | P\u00e9nibilit\u00e9 | Travailleurs du clic",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"name\": \"news\", \"object\": \"Sans titre\", \"fields\": [\"data\"]}}]"
+    }
+  }
+]

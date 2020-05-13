@@ -5,7 +5,6 @@ from nested_inline.admin import NestedStackedInline, NestedModelAdmin
 from typographie.admin import TypographieAdmin
 
 from .models import (
-    Publication,
     Issue,
     News,
 )
@@ -16,15 +15,6 @@ class NestedSortableStackedInline(SortableModelAdminBase, NestedStackedInline):
     """To have nested with sortable"""
 
     pass
-
-
-class PublicationAdmin(admin.ModelAdmin):
-    list_display = ("name", "description", "can_push")
-
-    def get_readonly_fields(self, request, obj=None):
-        if obj and not request.user.is_superuser:
-            return ("slug",)
-        return ()
 
 
 class NewsInline(NestedSortableStackedInline):
@@ -96,6 +86,5 @@ class NewsAdmin(admin.ModelAdmin):
     search_fields = ("title", "issue__title")
 
 
-admin.site.register(Publication, PublicationAdmin)
 admin.site.register(Issue, IssueAdmin)
 admin.site.register(News, NewsAdmin)

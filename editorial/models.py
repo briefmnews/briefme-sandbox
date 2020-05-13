@@ -13,7 +13,7 @@ from .utils import (
     apply_func_to_dict,
     add_target_blank_to_links,
 )
-from .schemas import schemas
+from .schemas import schemas, html_fields
 
 
 class AddLinkTargetBlankMixin:
@@ -24,7 +24,7 @@ class AddLinkTargetBlankMixin:
         self.data = apply_func_to_dict(
             self.data, self.get_html_data_fields(), add_target_blank_to_links
         )
-        super(AddLinkTargetBlankMixin, self).save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
 
 class Publication(base_models.Publication):
@@ -81,3 +81,14 @@ class News(AddLinkTargetBlankMixin, base_models.News):
 
     class Meta(base_models.News.Meta):
         ordering = ["position"]
+
+    def get_slug(self):
+        return self.title or ""
+
+    def get_html_data_fields(self):
+        return html_fields[self.template]
+
+    def save(self, *args, **kwargs):
+        self.position = 0
+        self.section_id = 1
+        super().save(*args, **kwargs)

@@ -10,3 +10,5 @@ migrate:
 reset_db:
 	sudo -u postgres psql -c "DROP DATABASE sandbox"
 	sudo -u postgres psql -c "CREATE DATABASE sandbox"
+	python manage.py migrate
+	python manage.py loaddata ./fixtures/fixtures.json

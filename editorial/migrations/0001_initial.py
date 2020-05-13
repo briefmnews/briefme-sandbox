@@ -15,92 +15,258 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Issue',
+            name="Issue",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created', model_utils.fields.AutoCreatedField(default=django.utils.timezone.now, editable=False, verbose_name='created')),
-                ('modified', model_utils.fields.AutoLastModifiedField(default=django.utils.timezone.now, editable=False, verbose_name='modified')),
-                ('status', model_utils.fields.StatusField(choices=[('draft', 'draft'), ('pending', 'pending'), ('published', 'published')], default='draft', max_length=100, no_check_for_status=True, verbose_name='status')),
-                ('status_changed', model_utils.fields.MonitorField(default=django.utils.timezone.now, monitor='status', verbose_name='status changed')),
-                ('title', models.CharField(max_length=200)),
-                ('template', models.CharField(choices=[('old', 'Ancien'), ('new', 'Nouveau')], default='new', max_length=6)),
-                ('intro', tinymce.models.HTMLField(blank=True, null=True)),
-                ('outro', tinymce.models.HTMLField(blank=True, null=True)),
-                ('published_at', model_utils.fields.MonitorField(default=django.utils.timezone.now, monitor='status', when={'published'})),
-                ('pushed', models.BooleanField(default=False)),
-                ('pushed_at', model_utils.fields.MonitorField(default=django.utils.timezone.now, monitor='pushed', when={True})),
-                ('slug', autoslug.fields.AutoSlugField(default=None, editable=False, max_length=200, null=True, populate_from='title')),
-                ('uuid', models.UUIDField(default=uuid.uuid4, editable=False)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "created",
+                    model_utils.fields.AutoCreatedField(
+                        default=django.utils.timezone.now,
+                        editable=False,
+                        verbose_name="created",
+                    ),
+                ),
+                (
+                    "modified",
+                    model_utils.fields.AutoLastModifiedField(
+                        default=django.utils.timezone.now,
+                        editable=False,
+                        verbose_name="modified",
+                    ),
+                ),
+                (
+                    "status",
+                    model_utils.fields.StatusField(
+                        choices=[
+                            ("draft", "draft"),
+                            ("pending", "pending"),
+                            ("published", "published"),
+                        ],
+                        default="draft",
+                        max_length=100,
+                        no_check_for_status=True,
+                        verbose_name="status",
+                    ),
+                ),
+                (
+                    "status_changed",
+                    model_utils.fields.MonitorField(
+                        default=django.utils.timezone.now,
+                        monitor="status",
+                        verbose_name="status changed",
+                    ),
+                ),
+                ("title", models.CharField(max_length=200)),
+                (
+                    "template",
+                    models.CharField(
+                        choices=[("old", "Ancien"), ("new", "Nouveau")],
+                        default="new",
+                        max_length=6,
+                    ),
+                ),
+                ("intro", tinymce.models.HTMLField(blank=True, null=True)),
+                ("outro", tinymce.models.HTMLField(blank=True, null=True)),
+                (
+                    "published_at",
+                    model_utils.fields.MonitorField(
+                        default=django.utils.timezone.now,
+                        monitor="status",
+                        when={"published"},
+                    ),
+                ),
+                ("pushed", models.BooleanField(default=False)),
+                (
+                    "pushed_at",
+                    model_utils.fields.MonitorField(
+                        default=django.utils.timezone.now, monitor="pushed", when={True}
+                    ),
+                ),
+                (
+                    "slug",
+                    autoslug.fields.AutoSlugField(
+                        default=None,
+                        editable=False,
+                        max_length=200,
+                        null=True,
+                        populate_from="title",
+                    ),
+                ),
+                ("uuid", models.UUIDField(default=uuid.uuid4, editable=False)),
             ],
-            options={
-                'ordering': ['-published_at'],
-                'abstract': False,
-            },
+            options={"ordering": ["-published_at"], "abstract": False,},
         ),
         migrations.CreateModel(
-            name='Publication',
+            name="Publication",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=128)),
-                ('description', models.TextField()),
-                ('slug', models.SlugField(max_length=30, unique=True)),
-                ('can_push', models.BooleanField(default=False)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=128)),
+                ("description", models.TextField()),
+                ("slug", models.SlugField(max_length=30, unique=True)),
+                ("can_push", models.BooleanField(default=False)),
             ],
-            options={
-                'abstract': False,
-            },
+            options={"abstract": False,},
         ),
         migrations.CreateModel(
-            name='Section',
+            name="Section",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created', model_utils.fields.AutoCreatedField(default=django.utils.timezone.now, editable=False, verbose_name='created')),
-                ('modified', model_utils.fields.AutoLastModifiedField(default=django.utils.timezone.now, editable=False, verbose_name='modified')),
-                ('title', models.CharField(max_length=200)),
-                ('slug', models.CharField(max_length=16)),
-                ('color', models.CharField(max_length=7)),
-                ('order', models.PositiveIntegerField()),
-                ('active', models.BooleanField(default=False)),
-                ('publication', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='editorial.Publication')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "created",
+                    model_utils.fields.AutoCreatedField(
+                        default=django.utils.timezone.now,
+                        editable=False,
+                        verbose_name="created",
+                    ),
+                ),
+                (
+                    "modified",
+                    model_utils.fields.AutoLastModifiedField(
+                        default=django.utils.timezone.now,
+                        editable=False,
+                        verbose_name="modified",
+                    ),
+                ),
+                ("title", models.CharField(max_length=200)),
+                ("slug", models.CharField(max_length=16)),
+                ("color", models.CharField(max_length=7)),
+                ("order", models.PositiveIntegerField()),
+                ("active", models.BooleanField(default=False)),
+                (
+                    "publication",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="editorial.Publication",
+                    ),
+                ),
             ],
-            options={
-                'abstract': False,
-            },
+            options={"abstract": False,},
         ),
         migrations.CreateModel(
-            name='News',
+            name="News",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('created', model_utils.fields.AutoCreatedField(default=django.utils.timezone.now, editable=False, verbose_name='created')),
-                ('modified', model_utils.fields.AutoLastModifiedField(default=django.utils.timezone.now, editable=False, verbose_name='modified')),
-                ('title', models.CharField(blank=True, max_length=200)),
-                ('desc', models.CharField(blank=True, max_length=100)),
-                ('source', models.CharField(blank=True, max_length=255)),
-                ('position', models.PositiveSmallIntegerField(verbose_name='Position')),
-                ('utitle', models.CharField(blank=True, max_length=200)),
-                ('slug', autoslug.fields.AutoSlugField(default=None, editable=False, max_length=200, null=True, populate_from='get_slug')),
-                ('template', django_reactive.fields.TemplateField(choices=[('basic', 'Basique'), ('image', 'Image'), ('quote', 'Citation'), ('questions', 'Questions'), ('rewind', 'On rembobine'), ('start', 'On revient au début')], default='basic', max_length=200)),
-                ('data', django_reactive.fields.ReactJSONSchemaField(blank=True, default=dict)),
-                ('image', models.ImageField(blank=True, upload_to='')),
-                ('image_sn', models.ImageField(blank=True, upload_to='')),
-                ('issue', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='news', to='editorial.Issue')),
-                ('section', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='editorial.Section')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "created",
+                    model_utils.fields.AutoCreatedField(
+                        default=django.utils.timezone.now,
+                        editable=False,
+                        verbose_name="created",
+                    ),
+                ),
+                (
+                    "modified",
+                    model_utils.fields.AutoLastModifiedField(
+                        default=django.utils.timezone.now,
+                        editable=False,
+                        verbose_name="modified",
+                    ),
+                ),
+                ("title", models.CharField(blank=True, max_length=200)),
+                ("desc", models.CharField(blank=True, max_length=100)),
+                ("source", models.CharField(blank=True, max_length=255)),
+                ("position", models.PositiveSmallIntegerField(verbose_name="Position")),
+                ("utitle", models.CharField(blank=True, max_length=200)),
+                (
+                    "slug",
+                    autoslug.fields.AutoSlugField(
+                        default=None,
+                        editable=False,
+                        max_length=200,
+                        null=True,
+                        populate_from="get_slug",
+                    ),
+                ),
+                (
+                    "template",
+                    django_reactive.fields.TemplateField(
+                        choices=[
+                            ("basic", "Basique"),
+                            ("image", "Image"),
+                            ("quote", "Citation"),
+                            ("questions", "Questions"),
+                            ("rewind", "On rembobine"),
+                            ("start", "On revient au début"),
+                        ],
+                        default="basic",
+                        max_length=200,
+                    ),
+                ),
+                (
+                    "data",
+                    django_reactive.fields.ReactJSONSchemaField(
+                        blank=True, default=dict
+                    ),
+                ),
+                ("image", models.ImageField(blank=True, upload_to="")),
+                ("image_sn", models.ImageField(blank=True, upload_to="")),
+                (
+                    "issue",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="news",
+                        to="editorial.Issue",
+                    ),
+                ),
+                (
+                    "section",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="editorial.Section",
+                    ),
+                ),
             ],
             options={
-                'verbose_name_plural': 'news',
-                'ordering': ['position'],
-                'abstract': False,
+                "verbose_name_plural": "news",
+                "ordering": ["position"],
+                "abstract": False,
             },
             bases=(editorial.models.AddLinkTargetBlankMixin, models.Model),
         ),
         migrations.AddField(
-            model_name='issue',
-            name='publication',
-            field=models.ForeignKey(default=None, on_delete=django.db.models.deletion.CASCADE, to='editorial.Publication'),
+            model_name="issue",
+            name="publication",
+            field=models.ForeignKey(
+                default=None,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="editorial.Publication",
+            ),
         ),
     ]
