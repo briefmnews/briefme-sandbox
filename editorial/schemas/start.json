@@ -1,0 +1,142 @@
+{
+  "schema": {
+    "definitions": {
+      "sub_section": {
+        "type": "string",
+        "title": "Titre",
+        "enum": [
+          "Les personnages",
+          "À l’étranger",
+          "Le concept",
+          "À l’origine",
+          "L'analyse",
+          "Vrai-faux",
+          "Le mot",
+          "Le chiffre",
+          "Les entreprises",
+          "Les projets",
+          "Les organismes",
+          "Les définitions",
+          "Les partis",
+          "Politique étrangère",
+          "Pour / contre",
+          "Les conséquences humaines",
+          "Les scandales",
+          "Les chiffres",
+          "Les pouvoirs",
+          "Pouvoirs complémentaires",
+          "Les postes clés",
+          "Le contexte",
+          "L’éclairage",
+          "Les dates clés"
+        ]
+      }
+    },
+    "title": "Retour au début",
+    "type": "object",
+    "required": [
+      "intro", "origin"
+    ],
+    "properties": {
+      "intro": {
+        "type": "string",
+        "title": "Intro"
+      },
+      "origin": {
+        "type": "object",
+        "title": "À l'origine",
+        "properties": {
+          "title": {
+            "$ref": "#/definitions/sub_section"
+          },
+          "p": {
+            "title": "Texte",
+            "type": "string"
+          }
+        }
+      },
+      "chronology": {
+        "type": "object",
+        "title": "Chronologie",
+        "properties": {
+          "title": {
+            "$ref": "#/definitions/sub_section"
+          },
+          "dates": {
+            "type": "array",
+            "title": "Dates",
+            "items": {
+              "type": "object",
+              "title": "",
+              "properties": {
+                "year": {
+                  "type": "string",
+                  "title": "Année"
+                },
+                "p": {
+                  "type": "string",
+                  "title": "Texte"
+                }
+              }
+            }
+          }
+        }
+      },
+      "sub_news": {
+        "type": "object",
+        "title": "Divers",
+        "properties": {
+          "title": {
+            "$ref": "#/definitions/sub_section"
+          },
+          "text": {
+            "title": "Texte",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "title": "p"
+            }
+          }
+        }
+      }
+    }
+  },
+  "ui_schema": {
+    "intro": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 8
+      }
+    },
+    "origin": {
+      "p": {
+        "ui:widget": "textarea",
+        "ui:options": {
+          "rows": 8
+        }
+      }
+    },
+    "chronology": {
+      "dates": {
+        "items": {
+          "p": {
+            "ui:widget": "textarea",
+            "ui:options": {
+              "rows": 8
+            }
+          }
+        }
+      }
+    },
+    "sub_news": {
+      "text": {
+        "items": {
+          "ui:widget": "textarea",
+          "ui:options": {
+            "rows": 8
+          }
+        }
+      }
+    }
+  }
+}

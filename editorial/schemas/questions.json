@@ -1,0 +1,40 @@
+{
+  "schema": {
+    "type": "object",
+    "required": [],
+    "properties": {
+      "questions": {
+        "type": "array",
+        "title": "Questions",
+        "items": {
+          "type": "object",
+          "required": [
+            "question", "answer"
+          ],
+          "properties": {
+            "question": {
+              "type": "string",
+              "title": "Question"
+            },
+            "answer": {
+              "type": "string",
+              "title": "Réponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "ui_schema": {
+    "questions": {
+      "items": {
+        "answer": {
+          "ui:widget": "textarea",
+          "ui:options": {
+            "rows": 8
+          }
+        }
+      }
+    }
+  }
+}

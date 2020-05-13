@@ -1,0 +1,29 @@
+{
+  "schema": {
+    "title": "News",
+    "type": "object",
+    "required": [
+      "text"
+    ],
+    "properties": {
+      "text": {
+        "type": "array",
+        "title": "",
+        "items": {
+          "type": "string",
+          "title": "p"
+        }
+      }
+    }
+  },
+  "ui_schema": {
+    "text": {
+      "items": {
+        "ui:widget": "textarea",
+        "ui:options": {
+          "rows": 10
+        }
+      }
+    }
+  }
+}

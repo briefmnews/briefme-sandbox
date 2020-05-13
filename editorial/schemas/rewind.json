@@ -1,0 +1,59 @@
+{
+  "schema": {
+    "type": "object",
+    "required": [],
+    "properties": {
+      "rewind": {
+        "type": "array",
+        "title": "On rembobine",
+        "items": {
+          "type": "object",
+          "required": [
+            "text"
+          ],
+          "properties": {
+            "kicker": {
+              "type": "string",
+              "title": "Kicker"
+            },
+            "text": {
+              "type": "string",
+              "title": "Texte"
+            },
+            "link":{
+              "type": "object",
+              "title": "Lien",
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "title": "URL",
+                  "format": "uri"
+                },
+                "text": {
+                  "type": "string",
+                  "title": "Texte affiché"
+                },
+                "title": {
+                  "type": "string",
+                  "title": "Texte infobulle"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "ui_schema": {
+    "rewind": {
+      "items": {
+        "text": {
+          "ui:widget": "textarea",
+          "ui:options": {
+            "rows": 10
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema": {
+    "title": "Citation",
+    "type": "object",
+    "required": [
+      "text", "quote"
+    ],
+    "properties": {
+      "text": {
+        "type": "string",
+        "title": "Texte"
+      },
+      "quote": {
+        "type": "string",
+        "title": "Citation"
+      }
+    }
+  },
+  "ui_schema": {
+    "text": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 10
+      }
+    },
+    "quote": {
+      "ui:widget": "textarea",
+      "ui:options": {
+        "rows": 10
+      }
+    }
+  }
+}

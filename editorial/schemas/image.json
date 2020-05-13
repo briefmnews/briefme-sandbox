@@ -1,0 +1,39 @@
+{
+  "schema": {
+    "title": "News",
+    "type": "object",
+    "required": [
+      "text"
+    ],
+    "properties": {
+      "text": {
+        "type": "array",
+        "title": "",
+        "items": {
+          "type": "string",
+          "title": "p"
+        }
+      },
+      "image": {
+        "type": "string",
+        "format": "data-url",
+        "title": "Image"
+      }
+    }
+  },
+  "ui_schema": {
+    "text": {
+      "items": {
+        "ui:widget": "textarea",
+        "ui:options": {
+          "rows": 10
+        }
+      }
+    },
+    "image": {
+      "ui:options": {
+        "accept": ".jpg,.png,.jpeg"
+      }
+    }
+  }
+}
