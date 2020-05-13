@@ -1,0 +1,20 @@
+.mceEditor {
+    width: 100%;
+}
+
+textarea.mce-textbox {
+    font-size: 18px;
+}
+
+.rjsf textarea, .rjsf input {
+    width: 83%;
+}
+
+.rjsf textarea {
+    font-size: 17px;
+    line-height: 26px;
+}
+
+.rjsf label.control-label {
+    text-align: left;
+}
