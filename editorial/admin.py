@@ -2,7 +2,6 @@ from django.contrib import admin, messages
 
 from suit.admin import SortableModelAdminBase, SortableModelAdmin
 from nested_inline.admin import NestedStackedInline, NestedModelAdmin
-from typographie.admin import TypographieAdmin
 
 from .models import (
     Issue,
@@ -32,7 +31,7 @@ class NewsInline(NestedSortableStackedInline):
     view_on_site = False
 
 
-class IssueAdmin(TypographieAdmin, NestedModelAdmin):
+class IssueAdmin(admin.ModelAdmin):
     form = IssueForm
     fieldsets = (
         (None, {"fields": ("publication",), "classes": ("suit-tab", "suit-tab-meta")}),
